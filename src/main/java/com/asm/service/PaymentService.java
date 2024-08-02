@@ -4,9 +4,9 @@ import com.asm.config.Config;
 import com.asm.dto.CartDto;
 
 import jakarta.servlet.http.HttpServletRequest;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import java.io.UnsupportedEncodingException;
 import java.math.BigDecimal;
 import java.net.URLEncoder;
@@ -16,11 +16,11 @@ import java.util.*;
 
 @Service
 public class PaymentService {
-	
+
 	@Autowired
 	private CartService cartService;
-	
-	public String createPayment(HttpServletRequest req,CartDto cart) throws UnsupportedEncodingException {
+
+	public String createPayment(HttpServletRequest req, CartDto cart) throws UnsupportedEncodingException {
 		Integer amount = (int) (cart.getTotalAmount() * 100L); // Số tiền thanh toán
 		String orderType = "other"; // Loại đơn hàng
 		String vnp_TxnRef = Config.getRandomNumber(8); // Mã giao dịch ngẫu nhiên
@@ -80,4 +80,6 @@ public class PaymentService {
 		queryUrl += "&vnp_SecureHash=" + vnp_SecureHash;
 		return Config.vnp_PayUrl + "?" + queryUrl;
 	}
+
+
 }

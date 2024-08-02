@@ -27,7 +27,7 @@
 	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
 <!-- Bootstrap core CSS -->
-<link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet">
 
 <!-- Additional CSS Files -->
 <link rel="stylesheet" href="/assets/css/fontawesome.css">
@@ -214,8 +214,8 @@ https://templatemo.com/tm-589-lugx-gaming
 	<jsp:include page="/WEB-INF/views/template/footer.jsp"></jsp:include>
 	<!-- Scripts -->
 	<!-- Bootstrap core JavaScript -->
-	<script src="/vendor/jquery/jquery.min.js"></script>
-	<script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="/assets/js/jquery-1.11.3.min.js"></script>
+	<script src="/assets/js/bootstrap.min.js"></script>
 	<script src="/assets/js/isotope.min.js"></script>
 	<script src="/assets/js/owl-carousel.js"></script>
 	<script src="/assets/js/counter.js"></script>

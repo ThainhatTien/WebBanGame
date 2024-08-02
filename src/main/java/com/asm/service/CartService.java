@@ -69,6 +69,11 @@ public class CartService {
 		updateTotalAmount(cart);
 	}
 
+	public void cleanCart(CartDto cart, Integer gameId) {
+		cart.getDetail().remove(gameId);
+	}
+
+
 	public void updateItemQuantity(CartDto cart, Integer gameId, int quantity) {
 		CartDetailDto cartDetail = cart.getDetail().get(gameId);
 		if (cartDetail != null) {
